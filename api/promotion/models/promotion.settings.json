@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "promotions",
   "info": {
-    "name": "post",
+    "name": "promotion",
     "description": ""
   },
   "options": {
@@ -11,12 +11,14 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "content": {
-      "type": "richtext"
-    },
     "title": {
       "type": "string",
       "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "description": {
       "type": "string"
@@ -30,10 +32,17 @@
     "seo_keyword": {
       "type": "string"
     },
-    "slug": {
-      "type": "string",
-      "required": true,
-      "unique": true
+    "content": {
+      "type": "richtext"
+    },
+    "promotion_start": {
+      "type": "datetime"
+    },
+    "promotion_end": {
+      "type": "datetime"
+    },
+    "promotion_code": {
+      "type": "string"
     },
     "image": {
       "collection": "file",
@@ -46,16 +55,13 @@
       "plugin": "upload",
       "required": false
     },
-    "category": {
-      "model": "category"
+    "tags": {
+      "collection": "tag",
+      "via": "promotions",
+      "dominant": true
     },
     "language": {
       "model": "language"
-    },
-    "tags": {
-      "collection": "tag",
-      "via": "posts",
-      "dominant": true
     }
   }
 }

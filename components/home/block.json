@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_home_blocks",
+  "info": {
+    "name": "block",
+    "icon": "folder-plus",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "feature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.feature"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
