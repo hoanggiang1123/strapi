@@ -62,7 +62,7 @@
       "repeatable": true,
       "component": "home.block"
     },
-    "Social": {
+    "social": {
       "type": "component",
       "repeatable": true,
       "component": "home.social"
