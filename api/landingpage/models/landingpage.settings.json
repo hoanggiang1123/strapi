@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "landingpages",
   "info": {
-    "name": "landingpage"
+    "name": "landingpage",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -60,6 +61,11 @@
       "type": "component",
       "repeatable": true,
       "component": "home.block"
+    },
+    "Social": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.social"
     }
   }
 }
