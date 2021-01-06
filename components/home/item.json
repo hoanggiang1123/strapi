@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_home_items",
+  "info": {
+    "name": "item",
+    "icon": "sticky-note",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "heading": {
+      "type": "string",
+      "required": false,
+      "default": "h3"
+    }
+  }
+}
