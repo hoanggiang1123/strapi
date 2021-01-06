@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_home_menus",
+  "info": {
+    "name": "menu",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

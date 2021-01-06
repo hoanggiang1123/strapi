@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_menusections",
+  "info": {
+    "name": "menusection",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "menu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.menu"
+    }
+  }
+}
