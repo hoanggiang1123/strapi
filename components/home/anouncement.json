@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_home_anouncements",
+  "info": {
+    "name": "anouncement",
+    "icon": "inbox"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -67,16 +67,15 @@
       "repeatable": true,
       "component": "home.social"
     },
-    "notification": {
-      "type": "dynamiczone",
-      "components": [
-        "home.notification"
-      ]
-    },
     "footermenu": {
       "type": "component",
       "repeatable": true,
       "component": "home.menusection"
+    },
+    "anouncement": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.anouncement"
     }
   }
 }
