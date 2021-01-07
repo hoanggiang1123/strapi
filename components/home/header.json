@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_headers",
+  "info": {
+    "name": "header",
+    "icon": "anchor"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.logo"
+    },
+    "notification": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.notification"
+    }
+  }
+}
