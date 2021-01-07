@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "title": {
+    "label": {
       "type": "string",
       "required": true
     },
@@ -15,10 +15,6 @@
       "type": "component",
       "repeatable": true,
       "component": "home.menu"
-    },
-    "description": {
-      "type": "richtext",
-      "required": true
     }
   }
 }

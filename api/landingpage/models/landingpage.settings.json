@@ -49,9 +49,6 @@
       "plugin": "upload",
       "required": false
     },
-    "content": {
-      "type": "richtext"
-    },
     "slider": {
       "type": "component",
       "repeatable": true,
@@ -61,21 +58,6 @@
       "type": "component",
       "repeatable": true,
       "component": "home.block"
-    },
-    "social": {
-      "type": "component",
-      "repeatable": true,
-      "component": "home.social"
-    },
-    "footermenu": {
-      "type": "component",
-      "repeatable": true,
-      "component": "home.menusection"
-    },
-    "anouncement": {
-      "type": "component",
-      "repeatable": true,
-      "component": "home.anouncement"
     }
   }
 }

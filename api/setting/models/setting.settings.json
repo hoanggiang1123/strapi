@@ -11,15 +11,28 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "header": {
+    "logo": {
       "type": "component",
       "repeatable": false,
-      "component": "home.header"
+      "component": "home.logo"
     },
-    "footer": {
+    "notification": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
+      "component": "home.notification"
+    },
+    "footer_description": {
+      "type": "richtext"
+    },
+    "footer_menu": {
+      "type": "component",
+      "repeatable": true,
       "component": "home.menusection"
+    },
+    "footer_social": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.social"
     }
   }
 }
