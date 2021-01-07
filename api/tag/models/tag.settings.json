@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "tags",
   "info": {
-    "name": "tag"
+    "name": "tag",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -19,13 +20,19 @@
       "required": true,
       "unique": true
     },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "vi",
+        "zh",
+        "en"
+      ],
+      "default": "vi",
+      "required": true
+    },
     "promotions": {
       "via": "tags",
       "collection": "promotion"
-    },
-    "posts": {
-      "via": "tags",
-      "collection": "post"
     }
   }
 }

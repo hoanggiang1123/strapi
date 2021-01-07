@@ -51,11 +51,6 @@
     },
     "language": {
       "model": "language"
-    },
-    "tags": {
-      "collection": "tag",
-      "via": "posts",
-      "dominant": true
     }
   }
 }

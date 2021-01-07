@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/promotions/all",
+      "handler": "promotion.findAll",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/promotions/count",
       "handler": "promotion.count",
       "config": {

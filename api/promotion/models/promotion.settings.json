@@ -45,7 +45,7 @@
       "type": "string"
     },
     "image": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -54,11 +54,6 @@
       ],
       "plugin": "upload",
       "required": false
-    },
-    "tags": {
-      "collection": "tag",
-      "via": "promotions",
-      "dominant": true
     },
     "language": {
       "model": "language"
@@ -73,6 +68,11 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "promotions",
+      "dominant": true
     }
   }
 }

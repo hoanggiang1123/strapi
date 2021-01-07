@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/tags/all",
+      "handler": "tag.findAll",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/tags/count",
       "handler": "tag.count",
       "config": {

@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "categories",
   "info": {
-    "name": "category"
+    "name": "category",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -18,6 +19,14 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "vi",
+        "zh",
+        "en"
+      ]
     }
   }
 }
