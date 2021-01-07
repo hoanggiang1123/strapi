@@ -10,6 +10,7 @@ module.exports = {
     async findAll (ctx) {
 
         let { page, page_size, lang } = ctx.query;
+        
         let _start = (Number(page) -1) * Number(page_size);
         let query = {
             'language.slug': lang,
@@ -32,5 +33,12 @@ module.exports = {
             pagination,
             data
         }
+    },
+    async findDetail (ctx) {
+
+        const resp = await strapi.services.promotion.find(ctx.query)
+        let data = resp.map(entity => sanitizeEntity(entity, { model: strapi.models.promotion }));
+        if (data.length) return data[0];
+        return [];
     }
 };

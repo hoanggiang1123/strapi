@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/promotions/detail",
+      "handler": "promotion.findDetail",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/promotions/count",
       "handler": "promotion.count",
       "config": {
