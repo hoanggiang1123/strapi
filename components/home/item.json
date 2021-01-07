@@ -11,14 +11,13 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text",
-      "required": true
-    },
     "heading": {
       "type": "string",
       "required": false,
       "default": "h3"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
