@@ -24,30 +24,10 @@ export default strapi => {
     isRequired: pluginPkg.strapi.required || false,
     layout: null,
     lifecycles,
-    mainComponent: App,
+    mainComponent: null,
     name,
     preventComponentRendering: false,
-    trads,
-    menu: {
-      pluginsSectionLinks: [
-        {
-          destination: `/plugins/${pluginId}`,
-          icon,
-          label: {
-            id: `${pluginId}.plugin.name`,
-            defaultMessage: name,
-          },
-          name,
-          permissions: [
-            // Uncomment to set the permissions of the plugin here
-            // {
-            //   action: '', // the action name should be plugins::plugin-name.actionType
-            //   subject: null,
-            // },
-          ],
-        },
-      ],
-    },
+    trads
   };
 
   strapi.registerField({ type: 'wysiwyg', Component: Wysiwyg });

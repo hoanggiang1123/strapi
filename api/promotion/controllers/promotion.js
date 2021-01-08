@@ -5,6 +5,7 @@
  * to customize this controller
  */
 const { sanitizeEntity } = require('strapi-utils');
+const { tableOfContents } = require('../../../helpers/toc.js')
 
 module.exports = {
     async findAll (ctx) {
@@ -35,10 +36,13 @@ module.exports = {
         }
     },
     async findDetail (ctx) {
-
-        const resp = await strapi.services.promotion.find(ctx.query)
-        let data = resp.map(entity => sanitizeEntity(entity, { model: strapi.models.promotion }));
-        if (data.length) return data[0];
+        let resp = await strapi.services.promotion.find(ctx.query)
+        resp = resp.map(entity => sanitizeEntity(entity, { model: strapi.models.promotion }));
+        if (resp.length && resp[0].content) {
+            let newContent = tableOfContents(resp[0].content, {})
+            if (newContent) resp[0].content = newContent;
+            return resp[0];
+        }
         return [];
     }
 };
