@@ -46,6 +46,9 @@
     },
     "language": {
       "model": "language"
+    },
+    "seo_schema": {
+      "type": "json"
     }
   }
 }

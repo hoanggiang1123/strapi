@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+
 var icons = ReactQuill.Quill.import('ui/icons');
 icons.header[3] = require('!html-loader!quill/assets/icons/header-3.svg');
 icons.header[4] = require('!html-loader!quill/assets/icons/header-4.svg');

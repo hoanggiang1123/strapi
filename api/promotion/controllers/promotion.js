@@ -10,7 +10,7 @@ const { tableOfContents } = require('../../../helpers/toc.js')
 module.exports = {
     async findAll (ctx) {
 
-        let { page, page_size, lang } = ctx.query;
+        let { page, page_size, lang, slug } = ctx.query;
         
         let _start = (Number(page) -1) * Number(page_size);
         let query = {
@@ -18,21 +18,25 @@ module.exports = {
             _start,
             _limit: page_size
         }
-        let [count, promotions] = await Promise.all([
+        let [count, promotions, promotionContent] = await Promise.all([
             await strapi.services.promotion.count(query),
-            await strapi.services.promotion.find(query)
+            await strapi.services.promotion.find(query),
+            await strapi.services.page.find({ slug, 'language.slug': lang }),
         ])
 
         let data = promotions.map(entity => sanitizeEntity(entity, { model: strapi.models.promotion }));
+        let content = promotionContent.map(entity => sanitizeEntity(entity, { model: strapi.models.page }));
         let pagination = {
             total: Math.ceil( Number(count) / Number(page_size)),
             page_size: Number(page_size),
             current_page: Number(page),
             count: data.length
         }
+        if (content.length) content = content[0]
         return {
             pagination,
-            data
+            data,
+            content
         }
     },
     async findDetail (ctx) {

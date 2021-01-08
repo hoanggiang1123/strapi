@@ -58,6 +58,9 @@
       "type": "component",
       "repeatable": true,
       "component": "home.block"
+    },
+    "seo_schema": {
+      "type": "json"
     }
   }
 }
